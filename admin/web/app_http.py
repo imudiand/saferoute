@@ -1,5 +1,5 @@
 import server
-from flask import Flask
+from flask import current_app, Flask, Response, request, flash, redirect, url_for, g, session, render_template
 from admin.sr.blueprint import sr as sr_blueprint
 from admin import settings
 from flask.ext.mongoengine import MongoEngine
@@ -12,6 +12,10 @@ app.config.update(dict(
     MONGODB_SETTINGS = settings.mongo,
     SECRET_KEY=settings.secret_key,
 ))
+
+@app.route('/')
+def index():
+	return render_template('index.html')
 
 # Register Blueprints
 app.register_blueprint(sr_blueprint)
