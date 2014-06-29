@@ -2,7 +2,7 @@ from flask import Blueprint, Response, request, flash, redirect, url_for, jsonif
 from functools import wraps
 import os
 import json
-from server.sr.models import *
+from server.saferoute.models import *
 import sys
 from struct import *
 import requests
@@ -10,9 +10,9 @@ from sets import Set
 import random
 import string
 
-sr = Blueprint("sr", __name__, template_folder='../')
+saferoute = Blueprint("saferoute", __name__, template_folder='../')
 
 
-@sr.route('/sr/test', methods=['GET'])
-def sr_test():
+@saferoute.route('/saferoute/test', methods=['GET'])
+def saferoute_test():
     return "Saferoute server is now running !!!\n"

@@ -1,6 +1,6 @@
 import server
 from flask import Flask
-from server.sr.blueprint import sr as sr_blueprint
+from server.saferoute.blueprint import saferoute as saferoute_blueprint
 from server import settings
 from flask.ext.mongoengine import MongoEngine
 
@@ -14,7 +14,7 @@ app.config.update(dict(
 ))
 
 # Register Blueprints
-app.register_blueprint(sr_blueprint)
+app.register_blueprint(saferoute_blueprint)
 
 def bootstrap():
     db = MongoEngine(app)

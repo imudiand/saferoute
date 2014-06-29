@@ -1,4 +1,4 @@
-import sr
+import saferoute
 import web
 import argparse
 import socket
@@ -9,7 +9,7 @@ __all__ = ['parser']
 parser = argparse.ArgumentParser()
 subparser = parser.add_subparsers()
 
-sr.init_parser(subparser)
+saferoute.init_parser(subparser)
 web.init_parser(subparser)
 
 def main():

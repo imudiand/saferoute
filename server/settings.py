@@ -1,6 +1,6 @@
 import os
 import json
 
-mongo = {'db' : 'sr', 'host' : 'localhost'}
+mongo = {'db' : 'cfi', 'host' : 'localhost'}
 secret_key = '\xa8&\xa6|/\xa4\xde2\x91\xe5g\r\x9d\xe4XI\xb9\xe5\xd84P\xc23n\xaeD_\xb5_\x01\x10\xe7'
 

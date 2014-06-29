@@ -8,7 +8,7 @@ import argparse
 def cli(args):
     if args.app == 'public':
         from admin.web.app_http import run_debug
-    elif args.app == 'sr':
+    elif args.app == 'saferoute':
         from admin.web.app_http import run_debug
     else:
         raise NotImplementedError("No app exists for %s" % args.app)
